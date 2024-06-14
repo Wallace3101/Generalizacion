@@ -25,6 +25,7 @@ public class ControladorEstudiante {
                     "\n     NOMBRE Y APELLIDO: " + estudiantes[i].getDni().getPrimerApellido() + " " + 
                     estudiantes[i].getDni().getSegundoApellido() + " " +
                     estudiantes[i].getDni().getNombre() +
+                    "\n     CODIGO: " + estudiantes[i].getCodigo() +
                     "\n     PROGRAMA ACADEMICO: " + estudiantes[i].getProgramaAcad();
             }
         }

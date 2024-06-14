@@ -23,10 +23,12 @@ public class ControladorDocente {
         for (int i = 0; i < indice; i++) {
             if (docentes[i].getProfesion().equals(profesion)) {
                 return "Docente encontrado: " + 
-                    "\nNOMBRE Y APELLIDO: " + docentes[i].getDni().getPrimerApellido() + " " + 
+                    "\n     NOMBRE Y APELLIDO: " + docentes[i].getDni().getPrimerApellido() + " " + 
                     docentes[i].getDni().getSegundoApellido() + " " +
                     docentes[i].getDni().getNombre() +
-                    "\nESPECIALIDAD: " + docentes[i].getEspecialidad() + "\nNIVEL ACADEMICO: " + docentes[i].getNivelAcademico();
+                    "\n     PROFESION: " + docentes[i].getProfesion() +
+                    "\n     ESPECIALIDAD: " + docentes[i].getEspecialidad() + 
+                    "\n     NIVEL ACADEMICO: " + docentes[i].getNivelAcademico();
             }
         }
         return "Docente no encontrado";
@@ -35,24 +37,21 @@ public class ControladorDocente {
     public void editar(int index, String profesion, String especialidad, String nivelAcademico) {
         if (index >= 0 && index < indice) {
             System.out.println("\nDocente a editar: " + 
-                "\nNOMBRE Y APELLIDO: " + docentes[index].getDni().getPrimerApellido() + " " + 
+                "\n     NOMBRE Y APELLIDO: " + docentes[index].getDni().getPrimerApellido() + " " + 
                 docentes[index].getDni().getSegundoApellido() + " " + 
                 docentes[index].getDni().getNombre()
             );
-            docentes[index].setProfesion(profesion);
-            docentes[index].setEspecialidad(especialidad);
-            docentes[index].setNivelAcademico(nivelAcademico);
         } else {
             System.out.println("Índice fuera de rango");
         }
 
         System.out.println("\nDocente editado: " + 
-            "\nNOMBRE Y APELLIDO: " + docentes[index].getDni().getPrimerApellido() + " " + 
+            "\n     NOMBRE Y APELLIDO: " + docentes[index].getDni().getPrimerApellido() + " " + 
             docentes[index].getDni().getSegundoApellido() + " " + 
             docentes[index].getDni().getNombre() + 
-            "\nPROFESION: " + docentes[index].getProfesion() + 
-            "\nESPECIALIDAD: " + docentes[index].getEspecialidad() + 
-            "\nNIVEL ACADEMICO: " + docentes[index].getNivelAcademico()
+            "\n     PROFESION: " + docentes[index].getProfesion() + 
+            "\n     ESPECIALIDAD: " + docentes[index].getEspecialidad() + 
+            "\n     NIVEL ACADEMICO: " + docentes[index].getNivelAcademico()
         );
     }
 
@@ -69,12 +68,12 @@ public class ControladorDocente {
         for (int i = 0; i < indice; i++) {
             System.out.println(
                 "\nDocente "+ (i+1) +": " + 
-                "\nNOMBRE Y APELLIDO: " + docentes[i].getDni().getPrimerApellido() + " " + 
+                "\n     NOMBRE Y APELLIDO: " + docentes[i].getDni().getPrimerApellido() + " " + 
                 docentes[i].getDni().getSegundoApellido() + " " + 
                 docentes[i].getDni().getNombre() + 
-                "\nPROFESION: " + docentes[i].getProfesion() + 
-                "\nESPECIALIDAD: " + docentes[i].getEspecialidad() + 
-                "\nNIVEL ACADEMICO: " + docentes[i].getNivelAcademico()
+                "\n     PROFESION: " + docentes[i].getProfesion() + 
+                "\n     ESPECIALIDAD: " + docentes[i].getEspecialidad() + 
+                "\n     NIVEL ACADEMICO: " + docentes[i].getNivelAcademico()
             );
         }
     }
@@ -83,12 +82,12 @@ public class ControladorDocente {
         for (int i = 0; i < indice; i++) {
             System.out.println(
                 "Docente "+ (i+1) +": " + 
-                "\nNOMBRE Y APELLIDO: " + docentes[i].getDni().getPrimerApellido() + " " + 
+                "\n     NOMBRE Y APELLIDO: " + docentes[i].getDni().getPrimerApellido() + " " + 
                 docentes[i].getDni().getSegundoApellido() + " " + 
                 docentes[i].getDni().getNombre() + 
-                "\nPROFESION: " + docentes[i].getProfesion() + 
-                "\nESPECIALIDAD: " + docentes[i].getEspecialidad() + 
-                "\nNIVEL ACADEMICO: " + docentes[i].getNivelAcademico()
+                "\n     PROFESION: " + docentes[i].getProfesion() + 
+                "\n     ESPECIALIDAD: " + docentes[i].getEspecialidad() + 
+                "\n     NIVEL ACADEMICO: " + docentes[i].getNivelAcademico()
             );
         }
     }
