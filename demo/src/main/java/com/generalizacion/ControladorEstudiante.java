@@ -22,10 +22,10 @@ public class ControladorEstudiante {
         for (int i = 0; i < indice; i++) {
             if (estudiantes[i].getCodigo().equals(codigo)) {
                 return "Estudiante encontrado: " + 
-                    "\nNOMBRE Y APELLIDO: " + estudiantes[i].getDni().getPrimerApellido() + " " + 
+                    "\n     NOMBRE Y APELLIDO: " + estudiantes[i].getDni().getPrimerApellido() + " " + 
                     estudiantes[i].getDni().getSegundoApellido() + " " +
                     estudiantes[i].getDni().getNombre() +
-                    "\nPROGRAMA ACADEMICO: " + estudiantes[i].getProgramaAcad();
+                    "\n     PROGRAMA ACADEMICO: " + estudiantes[i].getProgramaAcad();
             }
         }
         return "Estudiante no encontrado";
@@ -33,23 +33,22 @@ public class ControladorEstudiante {
 
     public void editar(int index, String codigo, String programaAcad) {
         if (index >= 0 && index < indice) {
-            System.out.println("\nEstudiante a editar: " + 
-                "\nNOMBRE Y APELLIDO: " + estudiantes[index].getDni().getPrimerApellido() + " " + 
+            System.out.println("\nEstudiante a actualizar: " + 
+                "\n     NOMBRE Y APELLIDO: " + estudiantes[index].getDni().getPrimerApellido() + " " + 
                 estudiantes[index].getDni().getSegundoApellido() + " " + 
                 estudiantes[index].getDni().getNombre()
             );
-            estudiantes[index].setCodigo(codigo);
-            estudiantes[index].setProgramaAcad(programaAcad);
+            
         } else {
             System.out.println("Índice fuera de rango");
         }
 
-        System.out.println("\nEstudiante editado: " + 
-            "\nNOMBRE Y APELLIDO: " + estudiantes[index].getDni().getPrimerApellido() + " " + 
+        System.out.println("\nInformacion de estudiante actualizado: " + 
+            "\n     NOMBRE Y APELLIDO: " + estudiantes[index].getDni().getPrimerApellido() + " " + 
             estudiantes[index].getDni().getSegundoApellido() + " " + 
             estudiantes[index].getDni().getNombre() + 
-            "\nCODIGO: " + estudiantes[index].getCodigo() + 
-            "\nPROGRAMA ACADEMICO: " + estudiantes[index].getProgramaAcad()
+            "\n     CODIGO: " + estudiantes[index].getCodigo() + 
+            "\n     PROGRAMA ACADEMICO: " + estudiantes[index].getProgramaAcad()
         );
     }
 
@@ -66,25 +65,25 @@ public class ControladorEstudiante {
         for (int i = 0; i < indice; i++) {
             System.out.println(
                 "Estudiante " + (i + 1) + ": " + 
-                "\nNOMBRE Y APELLIDO: " + estudiantes[i].getDni().getPrimerApellido() + " " + 
+                "\n     NOMBRE Y APELLIDO: " + estudiantes[i].getDni().getPrimerApellido() + " " + 
                 estudiantes[i].getDni().getSegundoApellido() + " " + 
                 estudiantes[i].getDni().getNombre() + 
-                "\nCODIGO: " + estudiantes[i].getCodigo() + 
-                "\nPROGRAMA ACADEMICO: " + estudiantes[i].getProgramaAcad()+
-                "\n"
+                "\n     CODIGO: " + estudiantes[i].getCodigo() + 
+                "\n     PROGRAMA ACADEMICO: " + estudiantes[i].getProgramaAcad()
             );
         }
+    
     }
 
     public void listarEstudiantes() {
         for (int i = 0; i < indice; i++) {
             System.out.println(
                 "Estudiante " + (i + 1) + ": " + 
-                "\nNOMBRE Y APELLIDO: " + estudiantes[i].getDni().getPrimerApellido() + " " + 
+                "\n     NOMBRE Y APELLIDO: " + estudiantes[i].getDni().getPrimerApellido() + " " + 
                 estudiantes[i].getDni().getSegundoApellido() + " " + 
                 estudiantes[i].getDni().getNombre() + 
-                "\nCODIGO: " + estudiantes[i].getCodigo() + 
-                "\nPROGRAMA ACADEMICO: " + estudiantes[i].getProgramaAcad()
+                "\n     CODIGO: " + estudiantes[i].getCodigo() + 
+                "\n     PROGRAMA ACADEMICO: " + estudiantes[i].getProgramaAcad()
             );
         }
     }

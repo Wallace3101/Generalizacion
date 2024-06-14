@@ -5,58 +5,41 @@ public class Main {
         Dni dni01 = new Dni("Mendoza","Villanueva", "Mayra", "375934");
         Dni dni02 = new Dni("Soria","Blas", "Diana", "375934");
 
-        //Persona persona = new Persona(dni, 50.0, 1.60);
-        //Persona persona2 = new Persona(dni2, 51.0, 1.60);
-        
-        // ESTUDIANTES: 
-        Estudiante estudiante01 = new Estudiante(dni01, 50.0, 1.55, "2022110545", "Ing. de Sistemas e Informatica");
-        System.out.println(
-            "Estudiante: "+
-            "\n"+estudiante01.getDni().getPrimerApellido()+" "+
-            estudiante01.getDni().getSegundoApellido()+" "+
-            estudiante01.getDni().getNombre()+
-            "\nN° DNI: "+estudiante01.getDni().getNumero()+
-            "\nPESO: "+estudiante01.getPeso()+
-            "\nTALLA: "+estudiante01.getTalla()+
-            "\nCODIGO: "+estudiante01.getCodigo()+
-            "\nPROGRAMA ACADEMICO: "+estudiante01.getProgramaAcad()
-        );
+        Persona persona01 = new Persona(dni01, 50.0, 1.60);
+        Persona persona02 = new Persona(dni02, 51.0, 1.60);
 
-        Estudiante estudiante02 = new Estudiante(dni02, 51.0, 1.60, "2022110549", "Ing. de Sistemas e Informatica");
-        System.out.println("\nEstudiante: "+
-            "\n"+estudiante02.getDni().getPrimerApellido()+" "+
-            estudiante02.getDni().getSegundoApellido()+" "+
-            estudiante02.getDni().getNombre()+
-            "\nN° DNI: "+estudiante02.getDni().getNumero()+
-            "\nPESO: "+estudiante02.getPeso()+
-            "\nTALLA: "+estudiante02.getTalla()+
-            "\nCODIGO: "+estudiante02.getCodigo()+
-            "\nPROGRAMA ACADEMICO: "+estudiante02.getProgramaAcad()
-        );
+    // ESTUDIANTES: 
+        Estudiante estudiante01 = new Estudiante(persona01, "2022110545", "Ing. de Sistemas e Informatica");
+        System.out.println(estudiante01);
+        
+
+        Estudiante estudiante02 = new Estudiante(persona02, "2022110549", "Ing. de Sistemas e Informatica");
+        System.out.println(estudiante02);
+
         ControladorEstudiante controlador = new ControladorEstudiante(10);
 
-        // Agregar docentes
+        // Agregar estudiantes
         controlador.agregarEstudiante(estudiante01);
-        controlador.agregarEstudiante(estudiante01);
+        controlador.agregarEstudiante(estudiante02);
 
-        // Listar docentes
+        // Listar lista de estudiantes
         System.out.println("\nLista de estudiantes:");
         controlador.listarEstudiantes();
 
-        // Buscar un docente
-        System.out.println("\nBuscar estudiante:");
+        // Buscar un estudiante
+        System.out.println("\nBuscar estudiante por su codigo:");
         System.out.println(controlador.buscar("2022110545"));
 
-        // Editar un docente
+        // Editar un estudiante
         controlador.editar(0, "2022110540", "Educacion");
 
-        // Ordenar docentes
+        // Ordenar estudiantes
         System.out.println("\nLista de estudiantes ordenados:");
         controlador.ordenar();
 
 
-        /*// DOCENTES:
-        Dni dni03 = new Dni("Rivera", "Dueñas", "Lizbardo", "60609764");
+    // DOCENTES:
+        /*Dni dni03 = new Dni("Rivera", "Dueñas", "Lizbardo", "60609764");
         Dni dni04 = new Dni("Baldeon", "Canchaya", "Walter", "60559769");
 
         Docente docente01 = new Docente(

@@ -5,16 +5,23 @@ public class Estudiante extends Persona{
     private String codigo;
     private String programaAcad;
 
-    public Estudiante(Dni dni, Double peso, Double talla) {
-        super(dni, peso, talla);
-    }
-
-    public Estudiante(Dni dni, Double peso, Double talla, String codigo, String programaAcad) {
-        super(dni, peso, talla);
+    public Estudiante(Persona persona, String codigo, String programaAcad) {
+        super(persona.getDni(), persona.getPeso(), persona.getTalla());
         this.codigo = codigo;
         this.programaAcad = programaAcad;
     }
-
+    @Override
+    public String toString() {
+        return "Estudiante: "+
+            "\n     NOMBRE: "+this.getDni().getPrimerApellido()+" "+
+            this.getDni().getSegundoApellido()+" "+
+            this.getDni().getNombre()+
+            "\n     N° DNI: "+this.getDni().getNumero()+
+            "\n     PESO: "+this.getPeso()+
+            "\n     TALLA: "+this.getTalla()+
+            "\n     CODIGO: "+this.getCodigo()+
+            "\n     PROGRAMA ACADEMICO: "+this.getProgramaAcad();
+    }
     public String getCodigo() {
         return codigo;
     }
